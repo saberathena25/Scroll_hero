@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* One place to tune the scene's proportions. */
+  --car-h: clamp(190px, 34vh, 340px);
+  --road-w: calc(var(--car-h) * 0.74);
+  --road-top: 17vh;
+  --car-top: 24vh;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --car-h: clamp(170px, 28vh, 260px);
+    --road-w: calc(var(--car-h) * 0.6);
+  }
+}
+
+html {
+  background: #f4efe6;
+  color: #14110f;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.hand {
+  font-family: "Bradley Hand", "Segoe Print", "Segoe Script", "Chalkboard SE", "Comic Sans MS", cursive;
+}
+
+/* The road: dark asphalt, painted edge lines, and a dashed centre line. */
+.road-surface {
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0 6px,
+      rgba(244, 239, 230, 0.35) 6px 8px,
+      transparent 8px calc(100% - 8px),
+      rgba(244, 239, 230, 0.35) calc(100% - 8px) calc(100% - 6px),
+      transparent calc(100% - 6px)
+    ),
+    #1c1a18;
+}
+
+.road-surface::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 2px);
+  width: 4px;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(244, 239, 230, 0.3) 0 22px,
+    transparent 22px 56px
+  );
+}
+
+/* Tyre marks that trail behind the car, fading out with distance. */
+.tyre-mark {
+  position: absolute;
+  bottom: calc(100% - 22px);
+  width: 3px;
+  height: 100vh;
+  border-radius: 2px;
+  background: linear-gradient(to bottom, transparent, rgba(244, 239, 230, 0.24));
+}
+
+/* Hint for people who prefer reduced motion: nothing is pinned, nothing flies around. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

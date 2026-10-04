@@ -314,7 +314,7 @@ export default function Hero() {
 
             <div
               data-in
-             className="hint pointer-events-none absolute right-[calc(100%+8rem)] top-[4%] w-[4rem] opacity-0"
+             className="hint pointer-events-none absolute right-[calc(100%+4rem)] top-[4%] w-[9.5rem] opacity-0"
             >
               <p className="hint-i hand -rotate-3 text-right text-[0.95rem] leading-tight text-ink">
                 {content.hint}

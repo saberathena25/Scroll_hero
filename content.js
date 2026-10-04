@@ -5,10 +5,11 @@ export const content = {
   name: "Omkar",
 
   // Spaces between words become wider gaps; every letter is spaced out and animated individually.
-  headline: "WELCOME HOME",
+  headline: "WELCOME ITZFIZZ",
 
   // Small handwritten line under the headline.
-  tagline: "A tiny road trip, powered by your scroll wheel",
+  tagline: "A tiny road trip, powered by your scroll wheel
+    ",
 
   // Handwritten hint that rides along with the car until you start scrolling.
   hint: "psst… scroll slowly, he likes it gentle ↓",

@@ -2,8 +2,7 @@
 
 A hero section where a hand-drawn car drives down the page as you scroll. Built with Next.js, Tailwind CSS and GSAP ScrollTrigger.
 
-- **Live page:** _add your GitHub Pages link here_
-- **Repository:** _add your GitHub repo link here_
+- **Live page:** https://saberathena25.github.io/Scroll_hero/
 
 ## What it does
 
